@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ModifTrait</class>
+ <widget class="QWidget" name="ModifTrait">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* ======================================= */
+/* === GLOBAL &amp; FENÊTRE PRINCIPALE (1) === */
+/* ======================================= */
+
+QWidget {
+    background-color: #f0f8ff; /* Bleu très pâle */
+    color: #333333;
+    font-family: &quot;Arial&quot;, sans-serif;
+    font-size: 10pt;
+}
+
+/* Titre Principal */
+QLabel#titleLabel {
+    color: #004c8c;
+    font-size: 16pt;
+    font-weight: bold;
+    padding: 10px;
+    background-color: transparent;
+}
+
+/* Conteneur Principal Blanc */
+QFrame#mainContentFrame {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+
+/* ======================================= */
+/* === BOUTONS D'ACTION &amp; NAVIGATION === */
+/* ======================================= */
+
+/* Boutons Primaires (Style Général par défaut) */
+QPushButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 3px;
+    font-weight: bold;
+    min-width: 100px;
+}
+
+QPushButton:hover {
+    background-color: #0056b3;
+}
+
+/* Ciblage des Boutons Spécifiques */
+QPushButton#Ajouter { /* Bouton Ajouter du formulaire médecin */
+    min-width: 80px; 
+}
+
+QPushButton#AnulerMed, QPushButton#listButton { /* Boutons Secondaires/Annuler */
+    background-color: transparent;
+    color: #004c8c;
+    border: 1px solid #004c8c;
+    padding: 9px 15px;
+    min-width: 80px;
+}
+
+QPushButton#AnulerMed:hover, QPushButton#listButton:hover {
+    background-color: #e0f2ff;
+}
+
+
+/* ======================================= */
+/* === ÉLÉMENTS DE FORMULAIRE (MEDECIN) === */
+/* ======================================= */
+
+/* Titre de Sous-fenêtre */
+QLabel#subTitleLabel {
+    color: #004c8c;
+    font-size: 14pt;
+    font-weight: 600;
+    padding: 15px 0;
+    background-color: transparent;
+}
+
+/* Labels Spécifiques */
+QLabel#NomMed,
+QLabel#NumeroMed,
+QLabel#TauxJournalierMed {
+    background-color: transparent;
+    color: #333333;
+    font-weight: 500;
+    padding-right: 10px;
+}
+
+/* Champs de Saisie Spécifiques */
+QLineEdit#formNomMed,
+QLineEdit#formNumeroMed,
+QLineEdit#formTauxMed {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 5px;
+    border-radius: 3px;
+    color: #333333;
+    min-height: 25px;
+}
+
+QLineEdit#formNomMed:focus,
+QLineEdit#formNumeroMed:focus,
+QLineEdit#formTauxMed:focus {
+    border: 1px solid #007bff;
+}
+
+/* Styles pour les QLineEdit Génériques et QSpinBox si non nommés */
+QLineEdit, QSpinBox, QDateEdit {
+    border: 1px solid #cccccc;
+    padding: 5px;
+    border-radius: 3px;
+}</string>
+  </property>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>111</x>
+     <y>20</y>
+     <width>161</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Modification Traitement</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>60</y>
+     <width>258</width>
+     <height>171</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Numero           :</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="numeroTraitMod"/>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>N Med             :</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="n_medTr">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>N Patient         :</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLineEdit" name="n_patTrait"/>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_5">
+      <property name="text">
+       <string>Nombre de jours</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QSpinBox" name="nbJoursTr"/>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="label_6">
+      <property name="text">
+       <string>Date de début</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QDateEdit" name="dateDebTr"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>250</y>
+     <width>268</width>
+     <height>37</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QPushButton" name="modTrait">
+      <property name="text">
+       <string>Modifier</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="annModTr">
+      <property name="text">
+       <string>Annuler</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

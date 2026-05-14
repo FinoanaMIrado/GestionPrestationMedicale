@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>login</class>
+ <widget class="QWidget" name="login">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>400</width>
+    <height>300</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>400</width>
+    <height>300</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* ==================================== */
+/* 1. STYLES GÉNÉRAUX ET FOND DE FENÊTRE */
+/* ==================================== */
+
+/* Applique à la fenêtre principale (le QWidget 'login' dans votre cas) */
+QWidget#login {
+    /* Fond principal (Bleu très très pâle) */
+    background-color: #F0F8FF; 
+    /* Bordure douce */
+    border: 2px solid #DCDCDC; 
+    /* Coins légèrement arrondis */
+    border-radius: 10px; 
+}
+
+/* ==================================== */
+/* 2. ÉLÉMENTS DE TEXTE ET TITRES */
+/* ==================================== */
+
+/* Applique au titre AUTHENTIFICATION */
+QLabel#label {
+    /* Couleur de texte foncée */
+    color: #003366; 
+    /* Taille et poids de police pour le titre */
+    font-size: 24px;
+    font-weight: bold;
+    /* Aligner au centre */
+    text-align: center;
+    /* Marge supérieure pour l'espacement */
+    margin-top: 10px;
+}
+
+/* Applique aux étiquettes &quot;Utilisateur&quot; et &quot;Mot de passe&quot; */
+QLabel {
+    color: #444444; 
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 500;
+}
+
+/* ==================================== */
+/* 3. CHAMPS DE SAISIE (QLineEdit) */
+/* ==================================== */
+
+QLineEdit {
+    /* Couleur de fond (Blanc cassé, similaire à votre image) */
+    background-color: #F8F8F8; 
+    /* Bordure légère */
+    border: 1px solid #CCCCCC;
+    /* Coins légèrement arrondis pour un look moderne */
+    border-radius: 5px; 
+    /* Padding (espace interne) */
+    padding: 8px;
+    /* Marge */
+    margin-bottom: 10px;
+    /* Taille du texte */
+    font-size: 14px;
+    color: #333333;
+}
+
+/* Style au focus (quand l'utilisateur clique sur le champ) */
+QLineEdit:focus {
+    border: 1px solid #00A3CC; /* Bleu ciel pour le focus */
+    background-color: white;
+}
+
+/* ==================================== */
+/* 4. BOUTONS ET LIENS */
+/* ==================================== */
+
+/* Bouton principal &quot;SE CONNECTER&quot; */
+QPushButton#btnconnexion {
+    background-color: #007BFF; /* Bleu primaire */
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    min-width: 150px;
+    /* Ombre subtile pour un effet 3D */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+/* Effet au survol de la souris */
+QPushButton#btnconnexion:hover {
+    background-color: #0056b3; /* Bleu plus foncé au survol */
+}
+
+/* Effet au clic (pressé) */
+QPushButton#btnconnexion:pressed {
+    background-color: #004085;
+    /* Suppression de l'ombre pour simuler l'enfoncement */
+    box-shadow: none; 
+}
+
+/* Bouton lien &quot;Ajout d'utilisateur&quot; */
+QCommandLinkButton#linkadduser {
+    color: #007BFF; /* Mêmes couleurs que le bouton principal pour la cohérence */
+    text-decoration: underline;
+    font-size: 13px;
+    padding: 0; /* Supprimer le padding par défaut */
+    margin-top: 15px;
+}
+
+QCommandLinkButton#linkadduser:hover {
+    color: blue;
+}</string>
+  </property>
+  <widget class="QLineEdit" name="motdepasse">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>170</y>
+     <width>321</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Password</enum>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="utilisateur">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>80</y>
+     <width>321</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnconnexion">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>220</y>
+     <width>190</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>SE CONNECTER</string>
+   </property>
+  </widget>
+  <widget class="QCommandLinkButton" name="linkadduser">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>260</y>
+     <width>174</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Ajout d'utilisateur</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>10</y>
+     <width>231</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-weight:bold;
+font-size:20px;
+</string>
+   </property>
+   <property name="text">
+    <string>AUTHENTIFICATION</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>50</y>
+     <width>131</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>Utilisateur</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>140</y>
+     <width>181</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>Mot de passe</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

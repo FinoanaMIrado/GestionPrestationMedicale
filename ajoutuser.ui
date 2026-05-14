@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ajoutuser</class>
+ <widget class="QWidget" name="ajoutuser">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>400</width>
+    <height>300</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>400</width>
+    <height>300</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* ==================================== */
+/* 1. STYLES GÉNÉRAUX ET FOND DE FENÊTRE */
+/* ==================================== */
+
+/* Applique à la fenêtre principale (le QWidget 'login' dans votre cas) */
+QWidget#ajoutuser {
+    /* Fond principal (Bleu très très pâle) */
+    background-color: #F0F8FF; 
+    /* Bordure douce */
+    border: 2px solid #DCDCDC; 
+    /* Coins légèrement arrondis */
+    border-radius: 10px; 
+}
+
+/* ==================================== */
+/* 2. ÉLÉMENTS DE TEXTE ET TITRES */
+/* ==================================== */
+
+/* Applique au titre AUTHENTIFICATION */
+QLabel#label {
+    /* Couleur de texte foncée */
+    color: #003366; 
+    /* Taille et poids de police pour le titre */
+    font-size: 24px;
+    font-weight: bold;
+    /* Aligner au centre */
+    text-align: center;
+    /* Marge supérieure pour l'espacement */
+    margin-top: 10px;
+}
+
+/* Applique aux étiquettes &quot;Utilisateur&quot; et &quot;Mot de passe&quot; */
+QLabel {
+    color: #444444; 
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 500;
+}
+
+/* ==================================== */
+/* 3. CHAMPS DE SAISIE (QLineEdit) */
+/* ==================================== */
+
+QLineEdit {
+    /* Couleur de fond (Blanc cassé, similaire à votre image) */
+    background-color: #F8F8F8; 
+    /* Bordure légère */
+    border: 1px solid #CCCCCC;
+    /* Coins légèrement arrondis pour un look moderne */
+    border-radius: 5px; 
+    /* Padding (espace interne) */
+    padding: 8px;
+    /* Marge */
+    margin-bottom: 10px;
+    /* Taille du texte */
+    font-size: 14px;
+    color: #333333;
+}
+
+/* Style au focus (quand l'utilisateur clique sur le champ) */
+QLineEdit:focus {
+    border: 1px solid #00A3CC; /* Bleu ciel pour le focus */
+    background-color: white;
+}
+
+/* ==================================== */
+/* 4. BOUTONS ET LIENS */
+/* ==================================== */
+
+/* Bouton principal &quot;SE CONNECTER&quot; */
+QPushButton#btnajouter {
+    background-color: #007BFF; /* Bleu primaire */
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    min-width: 150px;
+    /* Ombre subtile pour un effet 3D */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+/* Effet au survol de la souris */
+QPushButton#btnajouter:hover {
+    background-color: #0056b3; /* Bleu plus foncé au survol */
+}
+
+/* Effet au clic (pressé) */
+QPushButton#btnajouter:pressed {
+    background-color: #004085;
+    /* Suppression de l'ombre pour simuler l'enfoncement */
+    box-shadow: none; 
+}
+
+/* Bouton lien &quot;Ajout d'utilisateur&quot; 
+QCommandLinkButton#linkadduser {
+    color: #007BFF; /* Mêmes couleurs que le bouton principal pour la cohérence 
+    background-color: transparent;
+    text-decoration: underline;
+    font-size: 13px;
+    padding: 0; /* Supprimer le padding par défaut 
+    margin-top: 15px;
+}
+
+QCommandLinkButton#linkadduser:hover {
+    color: #0056b3;
+}*/</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>AJOUTER UTILISATEUR</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Nom d'utilisateur</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLineEdit" name="utilisateur"/>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Mot de passe</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLineEdit" name="motdepasse">
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QPushButton" name="btnajouter">
+     <property name="text">
+      <string>AJOUTER</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

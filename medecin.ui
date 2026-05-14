@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>medecin</class>
+ <widget class="QWidget" name="medecin">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>400</width>
+    <height>300</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>400</width>
+    <height>300</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* ======================================= */
+/* === GLOBAL &amp; FENÊTRE PRINCIPALE (1) === */
+/* ======================================= */
+
+QWidget {
+    background-color: #f0f8ff; /* Bleu très pâle */
+    color: #333333;
+    font-family: &quot;Arial&quot;, sans-serif;
+    font-size: 10pt;
+}
+
+/* Titre Principal */
+QLabel#titleLabel {
+    color: #004c8c;
+    font-size: 16pt;
+    font-weight: bold;
+    padding: 10px;
+    background-color: transparent;
+}
+
+/* Conteneur Principal Blanc */
+QFrame#mainContentFrame {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+
+/* ======================================= */
+/* === BOUTONS D'ACTION &amp; NAVIGATION === */
+/* ======================================= */
+
+/* Boutons Primaires (Style Général par défaut) */
+QPushButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 3px;
+    font-weight: bold;
+    min-width: 100px;
+}
+
+QPushButton:hover {
+    background-color: #0056b3;
+}
+
+/* Ciblage des Boutons Spécifiques */
+QPushButton#Ajouter { /* Bouton Ajouter du formulaire médecin */
+    min-width: 80px; 
+}
+
+QPushButton#AnulerMed, QPushButton#listButton { /* Boutons Secondaires/Annuler */
+    background-color: transparent;
+    color: #004c8c;
+    border: 1px solid #004c8c;
+    padding: 9px 15px;
+    min-width: 80px;
+}
+
+QPushButton#AnulerMed:hover, QPushButton#listButton:hover {
+    background-color: #e0f2ff;
+}
+
+
+/* ======================================= */
+/* === ÉLÉMENTS DE FORMULAIRE (MEDECIN) === */
+/* ======================================= */
+
+/* Titre de Sous-fenêtre */
+QLabel#subTitleLabel {
+    color: #004c8c;
+    font-size: 14pt;
+    font-weight: 600;
+    padding: 15px 0;
+    background-color: transparent;
+}
+
+/* Labels Spécifiques */
+QLabel#NomMed,
+QLabel#NumeroMed,
+QLabel#TauxJournalierMed {
+    background-color: transparent;
+    color: #333333;
+    font-weight: 500;
+    padding-right: 10px;
+}
+
+/* Champs de Saisie Spécifiques */
+QLineEdit#formNomMed,
+QLineEdit#formNumeroMed,
+QLineEdit#formTauxMed {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 5px;
+    border-radius: 3px;
+    color: #333333;
+    min-height: 25px;
+}
+
+QLineEdit#formNomMed:focus,
+QLineEdit#formNumeroMed:focus,
+QLineEdit#formTauxMed:focus {
+    border: 1px solid #007bff;
+}
+
+/* Styles pour les QLineEdit Génériques et QSpinBox si non nommés */
+QLineEdit, QSpinBox, QDateEdit {
+    border: 1px solid #cccccc;
+    padding: 5px;
+    border-radius: 3px;
+}</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>250</y>
+     <width>284</width>
+     <height>37</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_3">
+    <item>
+     <widget class="QPushButton" name="Ajouter">
+      <property name="text">
+       <string>Ajouter</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer_3">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>48</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QPushButton" name="AnulerMed">
+      <property name="text">
+       <string>Anuler</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="Titre">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>20</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>Ajout de Medecin</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::PlainText</enum>
+   </property>
+   <property name="margin">
+    <number>5</number>
+   </property>
+   <property name="indent">
+    <number>-1</number>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>90</y>
+     <width>211</width>
+     <height>125</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_3">
+    <item row="1" column="0">
+     <widget class="QLabel" name="NomMed">
+      <property name="text">
+       <string>Nom :</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="formNomMed"/>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="TauxJournalierMed">
+      <property name="text">
+       <string>Taux journalier :</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="NumeroMed">
+      <property name="text">
+       <string>Numero :</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QLineEdit" name="formNumeroMed"/>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLineEdit" name="formTauxMed"/>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

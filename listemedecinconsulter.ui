@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>listemedecinconsulter</class>
+ <widget class="QWidget" name="listemedecinconsulter">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>566</width>
+    <height>302</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* ======================================= */
+/* === GLOBAL &amp; FENÊTRE PRINCIPALE (1) === */
+/* ======================================= */
+
+QWidget {
+    background-color: #f0f8ff; /* Bleu très pâle */
+    color: #333333;
+    font-family: &quot;Arial&quot;, sans-serif;
+    font-size: 10pt;
+}
+
+/* Titre Principal */
+QLabel#titleLabel {
+    color: #004c8c;
+    font-size: 16pt;
+    font-weight: bold;
+    padding: 10px;
+    background-color: transparent;
+}
+
+/* Conteneur Principal Blanc */
+QFrame#mainContentFrame {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+
+/* ======================================= */
+/* === BOUTONS D'ACTION &amp; NAVIGATION === */
+/* ======================================= */
+
+/* Boutons Primaires (Style Général par défaut) */
+QPushButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 3px;
+    font-weight: bold;
+    min-width: 100px;
+}
+
+QPushButton:hover {
+    background-color: #0056b3;
+}
+
+/* Ciblage des Boutons Spécifiques */
+QPushButton#Ajouter { /* Bouton Ajouter du formulaire médecin */
+    min-width: 80px; 
+}
+
+QPushButton#AnulerMed, QPushButton#listButton { /* Boutons Secondaires/Annuler */
+    background-color: transparent;
+    color: #004c8c;
+    border: 1px solid #004c8c;
+    padding: 9px 15px;
+    min-width: 80px;
+}
+
+QPushButton#AnulerMed:hover, QPushButton#listButton:hover {
+    background-color: #e0f2ff;
+}
+
+
+/* ======================================= */
+/* === ÉLÉMENTS DE FORMULAIRE (MEDECIN) === */
+/* ======================================= */
+
+/* Titre de Sous-fenêtre */
+QLabel#subTitleLabel {
+    color: #004c8c;
+    font-size: 14pt;
+    font-weight: 600;
+    padding: 15px 0;
+    background-color: transparent;
+}
+
+/* Labels Spécifiques */
+QLabel#NomMed,
+QLabel#NumeroMed,
+QLabel#TauxJournalierMed {
+    background-color: transparent;
+    color: #333333;
+    font-weight: 500;
+    padding-right: 10px;
+}
+
+/* Champs de Saisie Spécifiques */
+QLineEdit#formNomMed,
+QLineEdit#formNumeroMed,
+QLineEdit#formTauxMed {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 5px;
+    border-radius: 3px;
+    color: #333333;
+    min-height: 25px;
+}
+
+QLineEdit#formNomMed:focus,
+QLineEdit#formNumeroMed:focus,
+QLineEdit#formTauxMed:focus {
+    border: 1px solid #007bff;
+}
+
+/* Styles pour les QLineEdit Génériques et QSpinBox si non nommés */
+QLineEdit, QSpinBox, QDateEdit {
+    border: 1px solid #cccccc;
+    padding: 5px;
+    border-radius: 3px;
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0" colspan="3">
+    <widget class="QLabel" name="label">
+     <property name="styleSheet">
+      <string notr="true">font-size : 13.5px ;
+font : italic strong ;</string>
+     </property>
+     <property name="text">
+      <string>Etat de la liste des médecin consulté par un patient</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="2">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>N° ou Nom Patient</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Date de début :</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1" colspan="2">
+      <widget class="QLineEdit" name="searchM"/>
+     </item>
+     <item row="1" column="1">
+      <widget class="QDateEdit" name="dateDeb"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Date de fin </string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QDateEdit" name="dateFin"/>
+     </item>
+    </layout>
+   </item>
+   <item row="3" column="0">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>189</width>
+       <height>22</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="3" column="1">
+    <widget class="QPushButton" name="recherche">
+     <property name="text">
+      <string>Rechercher</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="2">
+    <spacer name="horizontalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>189</width>
+       <height>22</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="2" column="0" colspan="3">
+    <widget class="QTableWidget" name="listM">
+     <column>
+      <property name="text">
+       <string>MEDECIN</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>NOM</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>TAUX</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Date consultat°</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

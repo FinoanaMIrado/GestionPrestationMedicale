@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>etatdeprestation</class>
+ <widget class="QWidget" name="etatdeprestation">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>425</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Fenêtre principale */
+QWidget {
+    background-color: #f0f4f8;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Titre */
+QLabel#titrelabel {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2c3e50;
+    padding: 10px;
+}
+
+/* Labels */
+QLabel {
+    font-weight: 500;
+    color: #34495e;
+}
+
+/* Table */
+QTableWidget {
+    background-color: #ffffff;
+    border: 1px solid #bdc3c7;
+    gridline-color: #dfe6e9;
+    font-size: 13px;
+    alternate-background-color: #ecf0f1;
+}
+
+QHeaderView::section {
+    background-color: #3498db;
+    color: white;
+    padding: 4px;
+    border: none;
+    font-weight: bold;
+}
+
+/* Bouton &quot;Diagramme&quot; */
+QPushButton {
+    background-color: #27ae60;
+    color: white;
+    border-radius: 5px;
+    padding: 6px 12px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #2ecc71;
+}
+
+/* Label &quot;TOTAL :&quot; */
+QLabel#totalpre {
+    font-size: 16px;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+/* TextLabel dynamiques */
+QLabel#dynamicLabel {
+    font-style: italic;
+    color: #7f8c8d;
+}
+</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Année   : </string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0" colspan="3">
+      <widget class="QTableWidget" name="affichelistprestmedecin">
+       <column>
+        <property name="text">
+         <string>MEDECIN</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>NOM</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>PRESTATION</string>
+        </property>
+       </column>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>TOTAL :</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="2">
+      <widget class="QLabel" name="totalpre">
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1" colspan="2">
+      <widget class="QLabel" name="anneepre">
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1" colspan="2">
+      <widget class="QLabel" name="titrelabel">
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>ETAT DES PRESTATION</string>
+       </property>
+       <property name="scaledContents">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>DIAGRAMME</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

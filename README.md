@@ -40,4 +40,28 @@ Informations gérées :
 
 ---
 
+- Ajouter un patient
+- Modifier un patient
+- Supprimer un patient
+- Rechercher un patient par nom ou adresse
+- Afficher la liste des patients
+
+Informations gérées :
+
+- Numéro patient
+- Nom
+- Adresse
+
+---
+
+## 💊 Gestion des traitements
+
+L'application permet :
+
+- D'enregistrer un traitement
+- D'associer un patient à un médecin
+- De gérer les dates de consultation
+- De calculer le nombre de jours de traitement
+- De calculer le montant de la prestation
+
 ## 👤 Gestion des patients

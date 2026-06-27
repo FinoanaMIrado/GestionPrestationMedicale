@@ -22,6 +22,7 @@ Les objectifs principaux sont :
 - Générer des états et statistiques
 
 ---
+
 ## ✨ Fonctionnalités
 
 ## 👨‍⚕️ Gestion des médecins
@@ -39,6 +40,8 @@ Informations gérées :
 - Taux journalier
 
 ---
+
+## 👤 Gestion des patients
 
 - Ajouter un patient
 - Modifier un patient
@@ -64,4 +67,5 @@ L'application permet :
 - De calculer le nombre de jours de traitement
 - De calculer le montant de la prestation
 
-## 👤 Gestion des patients
+Calcul utilisé :
+Prestation = Taux journalier × Nombre de jours

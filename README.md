@@ -22,3 +22,22 @@ Les objectifs principaux sont :
 - Générer des états et statistiques
 
 ---
+## ✨ Fonctionnalités
+
+## 👨‍⚕️ Gestion des médecins
+
+- Ajouter un médecin
+- Modifier les informations d'un médecin
+- Supprimer un médecin
+- Rechercher un médecin
+- Afficher la liste des médecins
+
+Informations gérées :
+
+- Numéro médecin
+- Nom
+- Taux journalier
+
+---
+
+## 👤 Gestion des patients

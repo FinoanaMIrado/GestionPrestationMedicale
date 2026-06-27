@@ -69,3 +69,59 @@ L'application permet :
 
 Calcul utilisé :
 Prestation = Taux journalier × Nombre de jours
+
+## 📊 Rapports et statistiques
+
+L'application permet de générer :
+
+- La liste des patients traités par un médecin entre deux dates
+- La liste des médecins consultés par un patient
+- L'état annuel des prestations par médecin
+- Le montant total des prestations
+- Des graphiques statistiques (histogramme / camembert)
+- Des rapports PDF
+
+---
+
+# 🗄️ Base de données
+
+Le projet utilise **MySQL** pour stocker les données.
+
+Tables principales :
+
+### Table Médecin
+
+| Champ | Description |
+|-|-|
+| id_medecin | Identifiant du médecin |
+| nom | Nom du médecin |
+| taux | Tarif journalier |
+
+### Table Patient
+
+| Champ | Description |
+|-|-|
+| id_patient | Identifiant patient |
+| nom | Nom du patient |
+| adresse | Adresse |
+
+### Table Traitement
+
+| Champ | Description |
+|-|-|
+| id_traitement | Identifiant traitement |
+| id_medecin | Médecin associé |
+| id_patient | Patient associé |
+| date_consultation | Date de consultation |
+| nombre_jours | Durée du traitement |
+
+---
+
+# 🛠️ Technologies utilisées
+
+- **Langage de programmation : C++**
+- **Interface graphique : Qt Creator / Qt Framework**
+- **Base de données : MySQL**
+- **IDE : Qt Creator**
+- **Gestion des données : SQL**
+
